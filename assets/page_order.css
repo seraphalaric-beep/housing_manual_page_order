@@ -1,0 +1,118 @@
+.hmpo_wrap {
+	max-width: 1180px;
+}
+
+.hmpo_note {
+	color: #50575e;
+}
+
+.hmpo_tree,
+.hmpo_list {
+	margin: 0;
+	padding: 0;
+}
+
+.hmpo_list {
+	list-style: none;
+}
+
+.hmpo_list > .hmpo_item {
+	margin: 8px 0;
+}
+
+.hmpo_row {
+	display: grid;
+	grid-template-columns: 26px minmax(180px, 1fr) 120px auto;
+	align-items: center;
+	gap: 8px;
+	min-height: 42px;
+	padding: 6px 8px;
+	border: 1px solid #c3c4c7;
+	background: #fff;
+}
+
+.hmpo_handle {
+	color: #50575e;
+	cursor: grab;
+	font-size: 22px;
+	line-height: 1;
+	text-align: center;
+}
+
+.hmpo_handle:active {
+	cursor: grabbing;
+}
+
+.hmpo_title {
+	font-weight: 600;
+}
+
+.hmpo_position {
+	color: #50575e;
+	font-size: 12px;
+}
+
+.hmpo_controls {
+	display: inline-flex;
+	gap: 4px;
+}
+
+.hmpo_controls .button {
+	min-width: 34px;
+	padding: 0 8px;
+}
+
+.hmpo_children {
+	margin: 4px 0 12px 26px;
+}
+
+.hmpo_children > summary {
+	margin: 5px 0 7px;
+	color: #50575e;
+	cursor: pointer;
+}
+
+.hmpo_children > .hmpo_list {
+	margin-left: 12px;
+	padding-left: 14px;
+	border-left: 2px solid #dcdcde;
+}
+
+.hmpo_dragging > .hmpo_row {
+	border-color: #2271b1;
+	background: #f0f6fc;
+	opacity: 0.7;
+}
+
+.hmpo_save_row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 20px;
+}
+
+.hmpo_status {
+	color: #50575e;
+}
+
+.hmpo_status:focus,
+.hmpo_controls .button:focus-visible,
+.hmpo_children > summary:focus-visible {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+@media screen and (max-width: 782px) {
+	.hmpo_row {
+		grid-template-columns: 26px minmax(0, 1fr) auto;
+	}
+
+	.hmpo_position {
+		grid-column: 2;
+	}
+
+	.hmpo_controls {
+		grid-column: 3;
+		grid-row: 1 / span 2;
+	}
+}
